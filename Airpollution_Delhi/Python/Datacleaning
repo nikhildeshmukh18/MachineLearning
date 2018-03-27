@@ -1,0 +1,13 @@
+import numpy as np
+import pandas as pd
+air = pd.read_csv('C:/Users/nikhi/Desktop/AT.csv', parse_dates=[['Date', 'Time']],
+    index_col= 'Date_Time', dayfirst=True)
+
+bfill = air.asfreq('15T', method='ffill'
+bfill.to_csv('asfreq.csv')
+fifteen = pd.date_range('01 Jan 2016', '2 Feb 2016', freq='15T')
+fift = air.reindex(fifteen).interpolate('linear')
+fift = air.reindex(fifteen)
+f = fift.rolling(window=96),mean()
+fift.info()
+fift.to_csv('reindex.csv')
