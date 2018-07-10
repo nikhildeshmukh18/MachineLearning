@@ -1,6 +1,0 @@
-numpy==1.14.2
-pandas==0.22.0
-string==0.1.2
-re==0.2.22
-nltk=3.2.5
-sklearn
